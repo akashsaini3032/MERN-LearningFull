@@ -1,0 +1,60 @@
+/* Home.css – Stylish and isolated login form styling */
+
+.admin-login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c3e50;
+}
+
+.admin-login-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1f1c2c;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.admin-login-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admin-login-form label {
+  font-weight: 500;
+}
+
+.admin-login-form input {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.admin-login-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.admin-login-button:hover {
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  transform: scale(1.03);
+}

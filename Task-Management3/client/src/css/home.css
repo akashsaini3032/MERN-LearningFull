@@ -1,0 +1,223 @@
+/* === Main Layout === */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+}
+
+/* === Form Section === */
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+}
+.close-btn:hover {
+  color: #333;
+}
+
+/* === Image Section === */
+.login-image-section {
+  flex: 1;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Form Container === */
+.custom-form {
+  width: 100%;
+  max-width: 320px;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  animation: slideIn 0.5s ease-out;
+}
+
+/* === Animation Keyframe === */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Input Group with Emoji Icon === */
+.input-icon {
+  position: relative;
+}
+.emoji-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* === Inputs === */
+.custom-form .form-control {
+  padding-left: 38px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1.5px solid #ccc;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* === Login Button === */
+.login-btn {
+  width: 100%;
+  height: 42px;
+  margin-top: 15px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.login-btn:hover {
+  background: linear-gradient(to right, #0056b3, #003d80);
+  transform: translateY(-1px);
+}
+
+/* === Options Row === */
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+.options-row a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.options-row a:hover {
+  text-decoration: underline;
+}
+
+/* === Register Link === */
+.register-link {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* === Divider === */
+.divider {
+  text-align: center;
+  margin: 18px 0;
+  color: #999;
+  font-size: 14px;
+  position: relative;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  height: 1px;
+  width: 40%;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+}
+.divider::before {
+  left: 0;
+}
+.divider::after {
+  right: 0;
+}
+
+/* === Social Buttons === */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.social-login button {
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.social-login .facebook {
+  background-color: #3b5998;
+  color: #fff;
+}
+.social-login .twitter {
+  background-color: #1da1f2;
+  color: #fff;
+}
+.social-login .google {
+  background-color: #db4437;
+  color: #fff;
+}
+.social-login button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image-section {
+    display: none;
+  }
+
+  .login-form-section {
+    flex: none;
+    padding: 30px 20px;
+  }
+
+  .custom-form {
+    max-width: 90%;
+  }
+}
+

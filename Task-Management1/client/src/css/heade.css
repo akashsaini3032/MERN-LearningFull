@@ -1,0 +1,142 @@
+
+
+
+#header {
+  width: 100%;
+  padding: 20px 40px;
+  
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  color: #00ffe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 255, 231, 0.2);
+  border-bottom: 1px solid #00ffe725;
+  animation: slideDown 0.6s ease;
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#header svg {
+  color: #00ffe7;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#header svg:hover {
+  color: #00c0aa;
+  transform: scale(1.1);
+}
+
+/* Modal Styling */
+
+.modal-content {
+  background-color: #ffffff10;
+  backdrop-filter: blur(15px);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  animation: fadeIn 0.6s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  border-bottom: 1px solid #ffffff22;
+}
+
+.modal-title {
+  color: #00ffe7;
+  font-weight: bold;
+}
+
+.modal-body form label {
+  color: #ffffffdd;
+  font-weight: 600;
+}
+
+.modal-body form .form-control {
+  background-color: #ffffff15;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.modal-body form .form-control::placeholder {
+  color: #cccccc;
+}
+
+.modal-body form .form-control:focus {
+  background-color: #ffffff25;
+  box-shadow: 0 0 0 2px #00ffe7;
+  color: white;
+}
+
+/* Button */
+.modal-body button {
+  background-color: #00ffe7;
+  color: #0f2027;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 255, 231, 0.3);
+  transition: all 0.3s ease;
+}
+
+.modal-body button:hover {
+  background-color: #00c0aa;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 231, 0.5);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  #header h1 {
+    font-size: 1.4rem;
+  }
+
+  #header svg {
+    font-size: 1.8rem;
+  }
+}

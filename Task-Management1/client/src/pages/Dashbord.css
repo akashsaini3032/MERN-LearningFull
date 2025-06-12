@@ -1,0 +1,38 @@
+
+
+#dashboard {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  color: #00ffe7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+#dashboard h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#dashboard p {
+  font-size: 1.2rem;
+  color: #ffffffcc;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

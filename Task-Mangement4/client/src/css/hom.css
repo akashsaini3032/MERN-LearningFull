@@ -1,0 +1,74 @@
+
+
+.homeContainer {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  padding-top: 80px;
+  color: #fff;
+}
+
+.homeHeading {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.homeForm {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.homeLabel {
+  color: #fff;
+  font-weight: 600;
+}
+
+.homeInput {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.homeInput:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.homeButton {
+  width: 100%;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #00bcd4;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #0097a7;
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

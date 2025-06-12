@@ -1,0 +1,92 @@
+#dashboard {
+  background: linear-gradient(135deg, #1f3b73, #2a5298);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeInTop 1s ease-out;
+  margin: 20px;
+}
+
+#dashboard h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h5 {
+  color: aquamarine;
+  text-align: right;
+  padding: 10px 30px;
+  font-size: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#admindata {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 30px;
+  animation: fadeIn 1.5s ease;
+}
+
+#adminleftmenu {
+  flex: 1;
+  background-color: #1e293b;
+  color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#adminleftmenu:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background-color: #334155;
+}
+
+#rightdata {
+  flex: 3;
+  background-color: #f8fafc;
+  color: #111827;
+  padding: 30px;
+  border-radius: 10px;
+  min-height: 200px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+#rightdata:hover {
+  background-color: #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #admindata {
+    flex-direction: column;
+  }
+
+  #adminleftmenu, #rightdata {
+    width: 100%;
+  }
+
+  h5 {
+    text-align: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInTop {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
