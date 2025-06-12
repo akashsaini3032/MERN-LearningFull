@@ -37,8 +37,8 @@ const createUser=async(req, res)=>{
    var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'rajmishra3@gmail.com',
-    pass: 'ngbq ieiu hhhp qxdh'
+    user: 'aksaini000369@gmail.com',
+    pass: 'owtm whga enet kjsd'
   }
 });
  var mailOptions = {
