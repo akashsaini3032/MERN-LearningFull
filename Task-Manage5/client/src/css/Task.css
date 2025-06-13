@@ -1,0 +1,37 @@
+/* Neon glow animation */
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7;
+  }
+  100% {
+    box-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+  }
+}
+
+/* Neon hover for Assign Task button */
+button.btn-outline-info:hover {
+  color: #00ffe7 !important;
+  border-color: #00ffe7 !important;
+  background-color: #001f33 !important;
+  animation: neonGlow 1s infinite alternate;
+  transform: scale(1.05);
+}
+
+/* Neon hover for Submit button */
+button.btn-primary:hover {
+  color: #00ffe7 !important;
+  border-color: #00ffe7 !important;
+  background-color: #001f33 !important;
+  animation: neonGlow 1s infinite alternate;
+  transform: scale(1.03);
+}
+
+/* Neon hover for table rows */
+.table tbody tr:hover {
+  background-color: #001930 !important;
+  color: #00ffe7 !important;
+  box-shadow: 0 0 10px #00ffe7;
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}

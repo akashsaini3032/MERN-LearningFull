@@ -8,6 +8,7 @@ import "./css/footer.css";
 import "./css/Outlet.css"
 import "./css/home.css"
 import "./css/dash.css"
+import "./css/task.css"
 createRoot(document.getElementById('root')).render(
 
     <App />

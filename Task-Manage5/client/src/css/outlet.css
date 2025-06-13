@@ -15,7 +15,7 @@
   min-height: calc(100vh - 140px); /* Adjusting for header + footer height */
   padding: 40px 30px;
   /* background: linear-gradient(145deg, #1a2a38, #223a4a, #2c5364); */
-   background: #fff;
+   background: #FAFAFA;
   color: #f1f1f1;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
