@@ -8,5 +8,13 @@ route.post("/assigntask", AdminController.assignTask);
 route.get("/taskdetail", AdminController.taskDetail);
 route.get("/changetaskstatus", AdminController.changeTaskStatus);
 
+// update
+route.put("/updatetask/:id", AdminController.updateTask);
+route.delete("/deletetask/:id", AdminController.deleteTask);
+
+
+
+
+
 
 module.exports=route;
