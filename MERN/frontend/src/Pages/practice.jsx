@@ -1,45 +1,79 @@
 
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import BackEndUrl from "../Config/BackendUrl";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
+import Table from "react-bootstrap/Table";
 
-import BackendUrl from "../Config/BackendUrl";
-
-const Search = () => {
-  const [rno, setRno] = useState("");
+const Update = () => {
   const [mydata, setMyData] = useState([]);
+  const navigate = useNavigate();
 
-  const handleSubmit = async () => {
-    try {
-      let api = `${BackendUrl}getsearchdata/?rno=${rno}`;
-      const response = await axios.get(api);
-      setMyData(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+  const loadData = async () => {
+    let api = `${BackEndUrl}updateshowdata`;
+    const response = await axios.get(api);
+    console.log(response.data);
+    setMyData(response.data);
   };
+
+  const recDel = async (id) => {
+    let api = `${BackEndUrl}datadelete/?myid=${id}`;
+    const response = await axios.delete(api);
+    console.log(response.data);
+    loadData();
+  };
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const recEdit=async(id)=>{
+    navigate(`/edit/${id}`)
+  }
 
   const ans = mydata.map((key) => {
     return (
-      <div key={key.rollno}>
-        <h1>Student Rollno: {key.rollno}</h1>
-        <h1>Name: {key.name}</h1>
-        <h1>City: {key.city}</h1>
-        <h1>Fees: {key.fees}</h1>
-      </div>
-    );
+      <>
+        <tr>
+          <td>{key.rollno}</td>
+          <td>{key.name}</td>
+          <td>{key.city}</td>
+          <td>{key.fees}</td>
+          <td>
+            <a href="#" onClick={()=>{recDel(key._id)}}>Delete</a>
+          </td>
+          <td>
+            <button onClick={() => recEdit(key._id)}>Edit</button>
+
+           
+          </td>
+        </tr>
+      </>
+    )
   });
 
   return (
     <>
-      <h1>Search Data</h1>
-      Enter Rollno:{" "}
-      <input type="text" value={rno} onChange={(e) => setRno(e.target.value)} />
-      <button onClick={handleSubmit}>Search</button>
-      <hr />
-      {ans}
+      <Table striped bordered hover size="sm">
+        <thead>
+          <tr>
+           
+            <th>Rollno</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Fees</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>{ans}</tbody>
+      </Table>
     </>
   );
 };
 
-export default Search;
+export default Update;
+
+
+
