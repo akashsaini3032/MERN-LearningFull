@@ -1,61 +1,45 @@
 
 
-import { useState, useEffect } from "react";
-import BackendUrl from "../Config/BackendUrl"
-
+import { useState } from "react";
 import axios from "axios";
 
-import Table from 'react-bootstrap/Table';
+import BackendUrl from "../Config/BackendUrl";
 
-const Display=()=>{
+const Search = () => {
+  const [rno, setRno] = useState("");
+  const [mydata, setMyData] = useState([]);
 
-    const [mydata, setMyData]=useState([]);
-
-    const loadData=async()=>{
-
-        let api=`${BackendUrl}display`;
-
-        const response= await axios.get(api);
-        console.log(response.data);
-        setMyData(response.data);
+  const handleSubmit = async () => {
+    try {
+      let api = `${BackendUrl}getsearchdata/?rno=${rno}`;
+      const response = await axios.get(api);
+      setMyData(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
     }
+  };
 
-    useEffect(()=>{
-        loadData();
-    }, []);
+  const ans = mydata.map((key) => {
+    return (
+      <div key={key.rollno}>
+        <h1>Student Rollno: {key.rollno}</h1>
+        <h1>Name: {key.name}</h1>
+        <h1>City: {key.city}</h1>
+        <h1>Fees: {key.fees}</h1>
+      </div>
+    );
+  });
 
-    const ans=mydata.map((key)=>{
-        return(
-            <>
-            
-            <tr>
-                <td>{key.rollno}</td>
-                <td>{key.name}</td>
-                <td>{key.city}</td>
-                <td>{key.fees}</td>
-            </tr>
-            </>
-        )
-    })
+  return (
+    <>
+      <h1>Search Data</h1>
+      Enter Rollno:{" "}
+      <input type="text" value={rno} onChange={(e) => setRno(e.target.value)} />
+      <button onClick={handleSubmit}>Search</button>
+      <hr />
+      {ans}
+    </>
+  );
+};
 
-    return(
-        <>
-        <h1>My Display Page</h1>
-         <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>name</th>
-          <th>City</th>
-          <th>Fees</th>
-        </tr>
-      </thead>
-      <tbody>
-        {ans}
-      </tbody>
-    </Table>
-
-        </>
-    )
-}
-export default Display
+export default Search;
