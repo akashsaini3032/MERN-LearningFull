@@ -11,7 +11,7 @@ function App() {
 
 const initPay = (data) => {
   const options = {
-    key : "rzp_test_pzkHWxo3sRdVQW",
+    key : "rzp_test_tKx5atxA4zrfPz",
     amount: data.amount,
     currency: data.currency,
     name: shoe.name,
