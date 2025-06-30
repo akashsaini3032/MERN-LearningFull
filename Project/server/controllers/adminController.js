@@ -1,22 +1,5 @@
 const AdminModel= require("../models/adminModel");
 
-const multer=require('multer');
-const {CloudinaryStorage}=require('multer-storage-cloudinary');
-const cloudinary=require('_/cloudinary');
-
-
-
-const storage=new CloudinaryStorage({
-    cloudinary:cloudinary,
-    params:{
-        folder:'project',
-        format: async(req,file)=>'jpg',
-        public_id:(req,file)=>Date.now()+'-'+ file.originalname,
-
-
-    
-    },
-});
 
 
 
