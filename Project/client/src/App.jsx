@@ -4,6 +4,10 @@ import Home from "./pages/Home";
 import AdminLogin from "./admin/adminlogin";
 import AdminDashBoard from "./admin/AdminDashBoard";
 import UploadProduct from "./admin/UploadProduct";
+import Menu from "./pages/Menu";
+import Offers from "./pages/Offers";
+import Cart from "./pages/Cart";
+import Profile from "./pages/Profile";
 const App=()=>{
   return(
     <>
@@ -11,6 +15,11 @@ const App=()=>{
          <Routes>
           <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>} />
+          <Route path="/home" element={<Home/>}></Route>
+          <Route path="/menu" element={<Menu/>}></Route>
+          <Route path="/offers" element={<Offers/>}></Route>
+          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/profile" element={<Profile/>}></Route>
            <Route path="/admin" element={<AdminLogin/>}></Route>
           </Route>
          </Routes>

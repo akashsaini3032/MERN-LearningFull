@@ -2,6 +2,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link, useNavigate } from 'react-router-dom';
 const Header=()=>{
     return(
         <>
@@ -9,9 +10,13 @@ const Header=()=>{
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link as={Link} to="home">Home</Nav.Link>
+            <Nav.Link as={Link} to="menu">Menu</Nav.Link>
+            <Nav.Link as={Link} to="offers">Offers</Nav.Link>
+            <Nav.Link as={Link} to="cart">Cart</Nav.Link>
+            <Nav.Link as={Link} to="Profile">Profile</Nav.Link>
+           
+           
           </Nav>
         </Container>
       </Navbar>
@@ -21,3 +26,5 @@ const Header=()=>{
 }
 
 export default Header;
+
+
