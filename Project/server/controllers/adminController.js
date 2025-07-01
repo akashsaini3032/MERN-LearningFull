@@ -1,10 +1,6 @@
 const AdminModel= require("../models/adminModel");
 
 
-
-
-
-
 const adminLogin=async(req, res)=>{
     const { adminid , password } = req.body;  
     const Admin= await AdminModel.findOne({adminid:adminid});
