@@ -10,6 +10,8 @@ import b3 from "../Images/b3.jpg";
 
 import Carouse from './Carouse';
 import Dishes from '../component/Dishes';
+import ChefSection from '../component/ChefSection';
+import MenuSection from '../component/MenuSection';
 
 const Home=()=>{
     return(
@@ -58,9 +60,10 @@ const Home=()=>{
 </div>
 
 <br /><br />
-
+<MenuSection />
 <Carouse />
 <Dishes />
+<ChefSection />
         </>
     )
 }

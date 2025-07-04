@@ -1,0 +1,144 @@
+/* .menu-section__container {
+  padding: 3rem 1rem;
+  background-color: #0d2b28;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.menu-section__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.menu-section__tab {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #ccc;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.menu-section__tab.active {
+  color: #fff;
+  border-bottom: 2px solid #ffc267;
+}
+
+.menu-section__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-section__items {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menu-section__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.menu-section__item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffc267;
+  transition: transform 0.5s ease;
+}
+
+.menu-section__item-img:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.menu-section__item-info {
+  flex: 1;
+  text-align: left;
+}
+
+.menu-section__item-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.menu-section__item-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.menu-section__item-price {
+  font-weight: bold;
+  color: #ffc267;
+  white-space: nowrap;
+}
+
+.menu-section__image-wrapper {
+  flex: 1;
+  max-width: 500px;
+}
+
+.menu-section__main-image {
+  width: 100%;
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+  border: 3px solid #ffc267;
+  object-fit: cover;
+}
+
+.menu-section__timing {
+  margin: 2rem 0 0.5rem;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.menu-section__timing span {
+  color: #ffc267;
+}
+
+.menu-section__btn {
+  background-color: #ffc267;
+  color: #000;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.menu-section__btn:hover {
+  background-color: #ffae33;
+}
+
+@media (max-width: 768px) {
+  .menu-section__content {
+    flex-direction: column;
+  }
+
+  .menu-section__image-wrapper {
+    order: -1;
+  }
+} */
+
+
+
