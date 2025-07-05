@@ -1,11 +1,14 @@
 /* Gallary css */
-
+.gallary{
+     background-color:  #072c28;
+}
 .restaurant-photo-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
   gap: 20px;
   padding: 20px;
   animation: fadeIn 1.5s ease-in-out;
+  
   
 }
 
@@ -21,6 +24,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f9f9f9;
+  border-radius: 47%;
 }
 
 .restaurant-photo-gallery .photo-card:nth-child(1) { animation-delay: 0.1s; }

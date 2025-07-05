@@ -1,10 +1,11 @@
 import "../css/gallary.css";
 
+
 const Gallary=()=>{
     return(
         <>
-
- <h1 id="gallary">Most Demanding Foods!!!</h1>
+<div className="gallary">
+    <h1 id="gallary">Most Demanding Foods!!!</h1>
 
 <div className="restaurant-photo-gallery">
   <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/01.jpg"  ></img></div>
@@ -23,6 +24,8 @@ const Gallary=()=>{
   <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/07.jpg"  ></img></div>
  
 </div>
+</div>
+ 
         
         </>
     )
