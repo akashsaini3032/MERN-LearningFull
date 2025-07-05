@@ -12,6 +12,7 @@ import Carouse from './Carouse';
 import Dishes from '../component/Dishes';
 import ChefSection from '../component/ChefSection';
 import MenuSection from '../component/MenuSection';
+import Gallary from '../component/Gallary';
 
 const Home=()=>{
     return(
@@ -21,7 +22,7 @@ const Home=()=>{
       <Carousel.Item>
         <img src={b1} width="100%" height="400" />
         <Carousel.Caption>
-         
+         Akash Saini
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,27 +40,8 @@ const Home=()=>{
     </Carousel>
     <br /> <br />
 
-     <h1 id="gallary">Most Demanding Foods!!!</h1>
 
-<div className="restaurant-photo-gallery">
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/01.jpg"  ></img></div>
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/02.jpg"  ></img></div>
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/03.jpg"  ></img></div>
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/04.jpg"  ></img></div>
-  
-</div>
-
-<br /><br />
-
-<div className="restaurant-photo-gallery">
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/09.jpg"  ></img></div>
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/10.jpg"  ></img></div>
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/11.jpg"  ></img></div>
-  <div className="photo-card"> <img src="https://george-fx.github.io/APIs/dinehub/assets/dishes/07.jpg"  ></img></div>
- 
-</div>
-
-<br /><br />
+<Gallary />
 <MenuSection />
 <Carouse />
 <Dishes />
