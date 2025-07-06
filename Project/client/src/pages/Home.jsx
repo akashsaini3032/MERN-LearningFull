@@ -38,9 +38,9 @@ const Home=()=>{
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-    <br /> <br />
+  
 
-
+  
 <Gallary />
 <MenuSection />
 <Carouse />
