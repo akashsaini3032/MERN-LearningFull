@@ -37,3 +37,24 @@ h1 {
 {
     width: 90%;
 }
+
+
+#homedata
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carticon
+{
+    color: white;
+    font-size: 20px;
+}
+
+.itemcount
+{
+    color:white;
+    margin-right: 10px;
+    font-weight: bold;
+}

@@ -6,8 +6,9 @@ import AdminDashBoard from "./admin/AdminDashBoard";
 import UploadProduct from "./admin/UploadProduct";
 import Menu from "./pages/Menu";
 import Offers from "./pages/Offers";
-import Cart from "./pages/Cart";
+
 import Profile from "./pages/Profile";
+import CartData from "./CartData";
 const App=()=>{
   return(
     <>
@@ -18,9 +19,9 @@ const App=()=>{
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/menu" element={<Menu/>}></Route>
           <Route path="/offers" element={<Offers/>}></Route>
-          <Route path="/cart" element={<Cart/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
            <Route path="/admin" element={<AdminLogin/>}></Route>
+           <Route path="cartdata" element={<CartData/>}/>
           </Route>
          </Routes>
         

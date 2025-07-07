@@ -7,8 +7,15 @@ import "./css/style.css";
 import "./css/footer.css";
 import "./css/home.css";
 import "./css/admin.css";
+
+import store from './store.jsx';
+import {Provider} from "react-redux";
 createRoot(document.getElementById('root')).render(
 
-    <App />
+    <Provider store={store}>
+         <App />
+
+    </Provider>
+   
  
 )
