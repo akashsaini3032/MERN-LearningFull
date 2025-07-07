@@ -34,7 +34,7 @@ const cloudinary = require('../cloudinary');
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-        folder: 'myphotos', // folder name Cloudinary account
+        folder: 'project', // folder name Cloudinary account
         format: async (req, file) => 'jpg', // supports promises as well
         public_id: (req, file) => Date.now() + '-' + file.originalname,
     },
