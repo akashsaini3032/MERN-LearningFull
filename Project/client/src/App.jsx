@@ -9,6 +9,7 @@ import Offers from "./pages/Offers";
 
 import Profile from "./pages/Profile";
 import CartData from "./CartData";
+import Login from "./pages/Login";
 const App=()=>{
   return(
     <>
@@ -17,6 +18,8 @@ const App=()=>{
           <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>} />
           <Route path="/home" element={<Home/>}></Route>
+          <Route path="login" element={<Login/>}/>
+          {/* <Route path="registration" element={<Registration/>}/> */}
           <Route path="/menu" element={<Menu/>}></Route>
           <Route path="/offers" element={<Offers/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>

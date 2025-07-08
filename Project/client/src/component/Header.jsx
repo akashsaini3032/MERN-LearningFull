@@ -27,6 +27,7 @@ const navigate = useNavigate();
            
            
           </Nav>
+           <span style={{cursor:"pointer"}} onClick={()=>{navigate("/login")}}> Login </span>
           <span className='itemcount'> {cartLength} </span> 
 
           <FaShoppingCart className='carticon'

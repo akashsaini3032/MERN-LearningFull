@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const AdminRoute = require("./routes/adminRoute");
 const ProductRoute = require("./routes/productRoute");
+const UserRoute = require("./routes/userRoute");
 
 const Port=process.env.PORT || 8080;
 mongoose.connect(process.env.DBCON).then(()=>{
@@ -21,6 +22,7 @@ app.use(bodyParser.json())
 
 app.use("/admin", AdminRoute);
 app.use("/product", ProductRoute);
+app.use("/user", UserRoute);
 
 
 

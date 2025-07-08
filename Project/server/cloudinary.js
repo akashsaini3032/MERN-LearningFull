@@ -1,6 +1,4 @@
-// module.exports = require('./lib/cloudinary');
 
-// server/cloudinary.js
 const cloudinary = require('cloudinary').v2;
 
 cloudinary.config({
