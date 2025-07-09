@@ -50,7 +50,7 @@ import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { logout } from '../pages/userSlice'; // ✅ Make sure path is correct
+import { logout } from '../pages/userSlice'; 
 import '../css/Header.css';
 
 const Header = () => {
@@ -71,7 +71,7 @@ const Header = () => {
     <>
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">Foodora</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/home">
               Home
