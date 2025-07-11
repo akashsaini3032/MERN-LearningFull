@@ -45,7 +45,7 @@ let proImage="";
 
 const initPay = (data) => {
   const options = {
-    key : "rzp_test_pzkHWxo3sRdVQW",
+    key : "rzp_test_tKx5atxA4zrfPz",
     amount: totalAmount,
     currency: data.currency,
     name: productName,

@@ -8,6 +8,8 @@ import "./css/footer.css";
 import "./css/home.css";
 import "./css/admin.css";
 
+import './css/cart.css';
+
 import store from './store.jsx';
 import {Provider} from "react-redux";
 createRoot(document.getElementById('root')).render(
