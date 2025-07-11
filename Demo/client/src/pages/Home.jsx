@@ -33,8 +33,26 @@ const Home=()=>{
       }
   }
 
+  const authCheck = async () => {
+      let api=`${BackEndUrl}/user/authuser`;
+      let token = localStorage.getItem("token");
+      if (token) { 
+      const tokenResponse = await axios.post(api, null, { headers: { "x-auth-token": token } });
+      console.log(tokenResponse.data);
+
+      if (tokenResponse.data) { 
+        localStorage.setItem("userValid", true); 
+        localStorage.setItem("username", tokenResponse.data.name );
+        localStorage.setItem("useremail", tokenResponse.data.email );
+        localStorage.setItem("userid", tokenResponse.data._id );
+      }
+      }
+    }
+
+
 useEffect(()=>{
   loadData();
+   authCheck();
 }, []);
 
 

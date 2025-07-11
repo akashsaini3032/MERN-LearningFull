@@ -6,10 +6,12 @@ import { dataIncrease, dataDecrease,itemRemove } from "./cartSlice";
 
 import { MdPriceChange } from "react-icons/md";
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 
 const CartData=()=>{
     const cartData= useSelector(state=>state.mycart.cart);
     const dispatch= useDispatch();
+    const navigate= useNavigate();
 
      let totalAmount=0;
      const ans= cartData.map((key)=>{
@@ -40,7 +42,7 @@ const CartData=()=>{
         <>
           <h1> Our Cart Data</h1>
            <h3 align="center" style={{color:"blue"}}><MdPriceChange /> {totalAmount}
-          <Button variant="warning" style={{marginLeft:"30px"}}>Check Out</Button>
+          <Button variant="warning" onClick={()=>{navigate("/checkout")}} style={{marginLeft:"30px"}}>Check Out</Button>
           </h3>
 
            <Table striped bordered hover>

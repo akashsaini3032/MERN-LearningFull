@@ -1,105 +1,113 @@
-/* Header.css - Premium Mixed Theme */
+/* Header.css */
 
 .navbar {
-  background: linear-gradient(145deg, #1e1e2f, #2a2a3c);
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-  transition: background 0.4s ease;
+  background: linear-gradient(90deg, #ff512f, #dd2476) !important;
+  padding: 12px 0 !important;
+  font-family: 'Poppins', sans-serif !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  z-index: 999 !important;
 }
 
 .navbar-brand {
-  color: #ffffff !important;
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: 1px !important;
+  transition: transform 0.3s ease !important;
 }
 
 .navbar-brand:hover {
-  color: #00e6e6 !important;
+  transform: scale(1.05) !important;
+  color: #ffe8d6 !important;
 }
 
 .nav-link {
-  color: #d1d1d1 !important;
-  font-weight: 500;
-  margin-right: 1.2rem;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
+  color: #fff !important;
+  font-weight: 500 !important;
+  margin: 0 12px !important;
+  position: relative !important;
+  transition: color 0.3s ease, transform 0.3s ease !important;
 }
 
 .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #00e6e6;
-  transition: width 0.4s ease;
-  border-radius: 2px;
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -5px !important;
+  width: 0% !important;
+  height: 2px !important;
+  background-color: #fff !important;
+  transition: width 0.3s ease !important;
 }
 
 .nav-link:hover {
-  color: #ffffff !important;
+  color: #ffe8d6 !important;
+  transform: translateY(-2px) !important;
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  width: 100% !important;
 }
 
-.carticon {
-  color: #ffffff;
-  font-size: 1.8rem;
-  margin-left: 1.5rem;
-  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s;
+.navbar span {
+  color: #fff !important;
+  margin-left: 20px !important;
+  font-weight: 500 !important;
+  transition: color 0.3s ease !important;
 }
 
-.carticon:hover {
-  color: #00e6e6;
-  transform: scale(1.2);
-  text-shadow: 0 0 8px #00e6e6;
-  cursor: pointer;
+.navbar span a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  margin-left: 10px !important;
+  transition: color 0.3s ease !important;
+}
+
+.navbar span a:hover {
+  color: #ffd700 !important;
 }
 
 .itemcount {
-  background-color: #ff1744;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 2px 7px;
-  border-radius: 50%;
-  position: relative;
-  top: -10px;
-  right: -10px;
-  transition: background-color 0.3s, transform 0.3s;
+  background-color: #fff !important;
+  color: #dd2476 !important;
+  border-radius: 50% !important;
+  padding: 4px 10px !important;
+  font-size: 0.85rem !important;
+  font-weight: bold !important;
+  margin-left: 10px !important;
+  transition: transform 0.3s ease !important;
 }
 
 .itemcount:hover {
-  background-color: #f44336;
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 
-/* Responsive adjustments */
+.carticon {
+  font-size: 1.5rem !important;
+  color: #fff !important;
+  margin-left: 15px !important;
+  transition: transform 0.3s ease, color 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.carticon:hover {
+  transform: rotate(-10deg) scale(1.2) !important;
+  color: #ffd700 !important;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 1.3rem;
+  .nav-link {
+    margin: 5px 8px !important;
   }
 
-  .nav-link {
-    margin-right: 0.8rem;
-    font-size: 0.95rem;
+  .navbar span {
+    font-size: 0.85rem !important;
+    margin-left: 10px !important;
   }
 
   .carticon {
-    font-size: 1.6rem;
-  }
-
-  .itemcount {
-    font-size: 0.65rem;
-    top: -8px;
-    right: -8px;
+    font-size: 1.3rem !important;
   }
 }
