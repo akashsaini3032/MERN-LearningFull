@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose= require("mongoose");
 require('dotenv').config();
 
+const paymentRoute= require("./routes/payment");
 const AdminRoute = require("./routes/adminRoute");
 const ProductRoute = require("./routes/productRoute");
 const UserRoute = require("./routes/userRoute");
@@ -23,6 +24,7 @@ app.use(bodyParser.json())
 app.use("/admin", AdminRoute);
 app.use("/product", ProductRoute);
 app.use("/user", UserRoute);
+app.use("/api/payment", paymentRoute);
 
 
 

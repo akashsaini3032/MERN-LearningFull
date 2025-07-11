@@ -15,7 +15,8 @@ const AdminDashBoard = () => {
                 <div id="adminmenu">
                     <Nav defaultActiveKey="/home" className="flex-column">
                         <Nav.Link as={Link} to="uploadproduct">Upload Product</Nav.Link>
-                        <Nav.Link as={Link} to="/uploadproduct">Upload Product</Nav.Link>
+                        <Nav.Link as={Link} to="customerorder">
+                        Customer Orders</Nav.Link>
                         <Nav.Link as={Link} to="/uploadproduct">Upload Product</Nav.Link>
                         <Nav.Link as={Link} to="/uploadproduct">Upload Product</Nav.Link>
                         <Nav.Link as={Link} to="/uploadproduct">Upload Product</Nav.Link>
