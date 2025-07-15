@@ -3,6 +3,18 @@ const app=express();
 const cors = require('cors');
 const bodyParser = require('body-parser')
 const mongoose= require("mongoose");
+
+
+
+
+
+const googleAuthRoute = require('./routes/googleAuthRoute');
+const googleAuthRedirectRoute = require('./routes/googleAuthRedirectRoute');
+
+
+
+
+
 require('dotenv').config();
 
 const paymentRoute= require("./routes/payment");
@@ -25,6 +37,13 @@ app.use("/admin", AdminRoute);
 app.use("/product", ProductRoute);
 app.use("/user", UserRoute);
 app.use("/api/payment", paymentRoute);
+
+
+
+
+
+app.use('/api/auth', googleAuthRoute);
+app.use('/api/auth', googleAuthRedirectRoute);
 
 
 
