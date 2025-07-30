@@ -1,0 +1,133 @@
+/* delightfulCarousel.css - Premium Carousel UI */
+
+.delightful-carousel-container {
+  background-color: #0b2c2e;
+  color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.carousel-header h1 {
+  font-size: 3.5rem;
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.carousel-header p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+.carousel-header .highlight {
+  color: #f4b43c;
+  font-weight: 500;
+}
+
+/* 🎯 Main image wrapper */
+.carousel-image-wrapper {
+  position: relative;
+  width: 92%;
+  max-width: 1050px;
+  margin: 3rem auto;
+  aspect-ratio: 2.5/1;
+  border-radius: 200px; /* extra round */
+  overflow: hidden;
+  border: 4px solid #1f4648;
+  background-color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel-image-wrapper:hover {
+  transform: scale(1.015);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+}
+
+/* 🖼️ Image itself */
+.carousel-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease;
+}
+
+/* ⬅️➡️ Navigation Buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(11, 44, 46, 0.85);
+  color: #ffffff;
+  border: none;
+  font-size: 1.6rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.nav-button:hover {
+  background-color: #f4b43c;
+  color: #0b2c2e;
+  transform: scale(1.1);
+}
+
+.nav-button.left {
+  left: 20px;
+}
+
+.nav-button.right {
+  right: 20px;
+}
+
+/* Footer with info */
+.carousel-footer {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  font-size: 1rem;
+  color: #e5e7eb;
+  border-top: 1px solid #1a3f41;
+  padding-top: 1rem;
+}
+
+.carousel-footer .highlight {
+  color: #f4b43c;
+  font-weight: 600;
+}
+
+.carousel-footer .star {
+  color: #f4b43c;
+  margin: 0 8px;
+  font-size: 1.1rem;
+}
+
+/* 🔁 Mobile responsive */
+@media (max-width: 640px) {
+  .carousel-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-header p {
+    font-size: 1rem;
+  }
+
+  .carousel-image-wrapper {
+    border-radius: 100px;
+  }
+
+  .nav-button {
+    font-size: 1.3rem;
+    width: 38px;
+    height: 38px;
+  }
+}
