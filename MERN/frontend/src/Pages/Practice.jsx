@@ -1,31 +1,40 @@
-
-import { useParams } from "react-router-dom";
-import { useState } from "react";
-
-import BackendUrl from "../Config/BackendUrl";
-
-import axios from "axios";
-
-
-import { useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import BackendUrl from "../Config/BackendUrl";
 
 
-const Insert=()=>{
-    const [input,setInput]=useState([])
-    const handleInput=async(e)=>{
-        let name=e.target.name 
-        let value=e.target.value 
-        setInput(values=>({...values,[name]:value}))
+
+const Edit=()=>{
+
+    const {id}=useParams();
+    const [mydata, setMyData]=useState({});
+
+    const loadData=async()=>{
+
+        let api=`${BackendUrl}editdatashow/?id=${id}`;
+
+        const response=await axios.get(api);
+        console.log(response.data);
+        setMyData(response.data);
     }
 
 
-    const handleSubmit=async(e)=>{
-        e.preventDefault()
-        let api=`${BackendUrl}save`
-        const response=await axios.post(api,input)
-        console.log(response)
-        alert(response.data.msg)
+    useEffect(()=>{
+        loadData();
+    },[])
+
+
+    const handleInput=(e)=>{
+        let name=e.target.name; 
+        let value=e.target.value;
+
+        setMyData(values=>({...values,[name]:value}))
+        console.log(mydata);
+    }
+
+    const handleSubmit=async()=>{
+
+        let api=`${BackendUrl}editdatasave`
+        const response=await axios.put(api,mydata);
+        alert(response.data.msg);
     }
 }
