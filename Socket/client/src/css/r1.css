@@ -1,0 +1,32 @@
+
+
+
+#head
+{
+    width: 100%;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    color: rebeccapurple;
+}
+
+#footer
+{
+    width: 100%;
+    padding: 50px;
+    background-color: lightblue;
+    margin-top: 50px;
+}
+
+#userform
+{
+    width: 500px;
+    margin: auto;
+}
+
+#dashborad
+{
+    width: 100%;
+    padding: 50px;
+    background-color: lightgray;
+}
