@@ -1,0 +1,145 @@
+
+
+.myForm{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+Main Container Styling
+.data-display-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #121218;
+  border-radius: 16px;
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border: 1px solid #252530;
+  position: relative;
+  overflow: hidden;
+}
+
+.data-display-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg, 
+    rgba(255,255,255,0.1) 0%, 
+    rgba(255,255,255,0) 20%, 
+    rgba(100, 217, 255, 0.15) 50%, 
+    rgba(255,255,255,0) 80%, 
+    rgba(255,255,255,0.1) 100%
+  );
+  -webkit-mask: linear-gradient(aqua 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.data-display-container h1 {
+  color: #e0e0ff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  color: #f0f0ff;
+  background: #1a1a24;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: linear-gradient(135deg, #1e1e2a 0%, #252535 100%);
+}
+
+.table th {
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #a0a0c0;
+  border-bottom: 2px solid #2a2a35;
+  text-align: left;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #2a2a35;
+  transition: all 0.3s ease;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover td {
+  background: rgba(100, 217, 255, 0.05);
+  color: #ffffff;
+}
+
+/* Striped Rows */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Hover Effects */
+.table-hover tbody tr:hover {
+  background: rgba(100, 217, 255, 0.08);
+}
+
+/* Cell Highlight Animation */
+.table tbody tr td {
+  position: relative;
+}
+
+.table tbody tr:hover td::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    rgba(100, 217, 255, 0.8), 
+    rgba(100, 150, 255, 0.8));
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .data-display-container {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+  
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 0.75rem;
+  }
+}
