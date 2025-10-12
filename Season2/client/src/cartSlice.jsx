@@ -27,23 +27,23 @@ const cartSlice= createSlice({
                 }
              }
         },
-        dataDecrease:(state, actions)=>{
-             for (var i=0; i<state.cart.length; i++)
-             {
-                if (state.cart[i].id==actions.payload.id)
-                {
-                    if (state.cart[i].qnty<=1)
-                    {
-                       alert("Quantity not less than one")
-                    }
-                    else 
-                    {
-                       state.cart[i].qnty--;
-                    }
+      //   dataDecrease:(state, actions)=>{
+      //        for (var i=0; i<state.cart.length; i++)
+      //        {
+      //           if (state.cart[i].id==actions.payload.id)
+      //           {
+      //               if (state.cart[i].qnty<=1)
+      //               {
+      //                  alert("Quantity not less than one")
+      //               }
+      //               else 
+      //               {
+      //                  state.cart[i].qnty--;
+      //               }
                    
-                }
-             }
-        },
+      //           }
+      //        }
+      //   },
 
         itemRemove:(state, actions)=>{
                   state.cart=state.cart.filter(item=>item.id!=actions.payload.id);
