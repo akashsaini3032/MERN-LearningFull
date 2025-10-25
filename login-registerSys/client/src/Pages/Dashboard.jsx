@@ -26,30 +26,30 @@
 
 
 
-import { useNavigate } from "react-router-dom";
-import "./Dashboard.css"; // Make sure to import the CSS
+// import { useNavigate } from "react-router-dom";
+// import "./Dashboard.css"; // Make sure to import the CSS
 
-function Dashboard() {
-  const navigate = useNavigate();
-  const logout = () => {
-    localStorage.clear();
-    navigate("/");
-  };
+// function Dashboard() {
+//   const navigate = useNavigate();
+//   const logout = () => {
+//     localStorage.clear();
+//     navigate("/");
+//   };
 
-  return (
-    <div id="dashboard-container">
-      <div className="dashboard-card">
-        <h2 className="dashboard-title">User Dashboard</h2>
-        <p className="dashboard-welcome">
-          Welcome <strong>{localStorage.getItem("user")}</strong><br />
-          Email: <strong>{localStorage.getItem("email")}</strong>
-        </p>
-        <button className="dashboard-btn" onClick={logout}>
-          Logout
-        </button>
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div id="dashboard-container">
+//       <div className="dashboard-card">
+//         <h2 className="dashboard-title">User Dashboard</h2>
+//         <p className="dashboard-welcome">
+//           Welcome <strong>{localStorage.getItem("user")}</strong><br />
+//           Email: <strong>{localStorage.getItem("email")}</strong>
+//         </p>
+//         <button className="dashboard-btn" onClick={logout}>
+//           Logout
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
-export default Dashboard;
+// export default Dashboard;
