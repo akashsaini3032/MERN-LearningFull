@@ -22,10 +22,10 @@ const Search = () => {
     })
     return (
         <>
-            <h1>Search Data</h1>
+            {/* <h1>Search Data</h1>
             <input type="text" onChange={(e) => { setRno(e.target.value) }} />
             <button onClick={handleSubmit}>Search</button>
-            {ans}
+            {ans} */}
         </>
     )
 }
