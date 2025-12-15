@@ -14,24 +14,24 @@ const userRegistration=async(req, res)=>{
     }
 }
 
-// const userLogin=async(req, res)=>{
-//     const { email, password } = req.body;
+const userLogin=async(req, res)=>{
+    const { email, password } = req.body;
      
-//     try {
-//            const User =await UserModel.findOne({email:email});           
-//            if (!User)
-//            {
-//              res.status(401).send({msg:"Invalid Email!"});
-//            }
-//            if (User.password!=password)
-//            {
-//             res.status(401).send({msg:"Invalid Password!"});
-//            }
-//        res.status(200).send({User:User, msg:"Login Succesfully"});
-//     } catch (error) {
-//          console.log(error);
-//     }
-// }
+    try {
+           const User =await UserModel.findOne({email:email});           
+           if (!User)
+           {
+             res.status(401).send({msg:"Invalid Email!"});
+           }
+           if (User.password!=password)
+           {
+            res.status(401).send({msg:"Invalid Password!"});
+           }
+       res.status(200).send({User:User, msg:"Login Succesfully"});
+    } catch (error) {
+         console.log(error);
+    }
+}
 
 module.exports={
     userRegistration,
