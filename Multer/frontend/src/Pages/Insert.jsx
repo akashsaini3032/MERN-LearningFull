@@ -20,15 +20,15 @@ const Insert = () => {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // const formData = new FormData()
-        // formData.append('file', uploadimg)
-        // formData.append('upload_preset', 'AkashSaini')
-        // formData.append('cloud_name', 'dlyyumwhi')
-        // const response = await axios.post("https://api.cloudinary.com/v1_1/dlyyumwhi/image/upload",formData)
-        // // console.log(response)
-        // let api=`${BackendUrl}save`
-        // console.log(response.data.url)
-        // const response1=await axios.post(api,{...input,img:response.data.url})
+        const formData = new FormData()
+        formData.append('file', uploadimg)
+        formData.append('upload_preset', 'AkashSaini')
+        formData.append('cloud_name', 'dlyyumwhi')
+        const response = await axios.post("https://api.cloudinary.com/v1_1/dlyyumwhi/image/upload",formData)
+        // console.log(response)
+        let api=`${BackendUrl}save`
+        console.log(response.data.url)
+        const response1=await axios.post(api,{...input,img:response.data.url})
 
 
         let api=`${BackendUrl}save`
