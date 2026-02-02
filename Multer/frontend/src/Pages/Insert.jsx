@@ -31,13 +31,13 @@ const Insert = () => {
         const response1=await axios.post(api,{...input,img:response.data.url})
 
 
-        let api=`${BackendUrl}save`
-        const formData=new FormData();
-        formData.append("rollno",input.rollno);
-        formData.append("name",input.name);
-        formData.append("city",input.city);
-        formData.append("fees",input.fees);
-        formData.append("image",uploadimg);
+        // let api=`${BackendUrl}save`
+        // const formData=new FormData();
+        // formData.append("rollno",input.rollno);
+        // formData.append("name",input.name);
+        // formData.append("city",input.city);
+        // formData.append("fees",input.fees);
+        // formData.append("image",uploadimg);
 
 
         const response =await axios.post(api, formData);
