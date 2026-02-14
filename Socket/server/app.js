@@ -28,17 +28,17 @@ const io = new Server(server, {
 });
 
 
-// io.on("connection", (socket) => {
-//   console.log(`User Connected: ${socket.id}`);
-//   socket.on("send_message", (data) => {
-//     console.log("Message from client:", data);
-//     io.emit("receive_message", data); // Broadcast to all clients
-//   });
-//   socket.on("disconnect", () => {
-//     console.log("User Disconnected:", socket.id);
-//   });
-// });
+io.on("connection", (socket) => {
+  console.log(`User Connected: ${socket.id}`);
+  socket.on("send_message", (data) => {
+    console.log("Message from client:", data);
+    io.emit("receive_message", data); // Broadcast to all clients
+  });
+  socket.on("disconnect", () => {
+    console.log("User Disconnected:", socket.id);
+  });
+});
 
-// server.listen(Port, ()=>{
-//     console.log(`Server Run On Port ${Port}`);
-// })
+server.listen(Port, ()=>{
+    console.log(`Server Run On Port ${Port}`);
+})
